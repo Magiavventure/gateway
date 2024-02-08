@@ -16,4 +16,10 @@ spring:
             - Path=/category/**
           filters:
             - RewritePath=/category/(?<remaining>.*), /${remaining}
+        - id: story
+          uri: https://story-xci7.onrender.com
+          predicates:
+            - Path=/story/**
+          filters:
+            - RewritePath=/story/(?<remaining>.*), /${remaining}
 
