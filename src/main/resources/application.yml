@@ -7,9 +7,7 @@ spring:
         cors-configurations:
           '[/**]':
             allowedOrigins:
-              - http://192.168.188.29:4200
-              - http://localhost:4200
-              - https://localhost
+              - https://magiavventure.it
             allowedMethods:
               - GET
               - POST
@@ -25,6 +23,8 @@ spring:
               - Access-Control-Request-Method
               - Access-Control-Request-Headers
               - Access-Control-Allow-Origin
+            exposedHeaders:
+              - Mg-A-Token
       routes:
         - id: authorization
           uri: https://authorization-8wr6.onrender.com

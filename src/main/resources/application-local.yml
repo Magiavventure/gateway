@@ -3,6 +3,29 @@ spring:
     name: gateway
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins:
+              - http://192.168.188.29:4200
+              - http://localhost:4200
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
+              - OPTIONS
+            allowedHeaders:
+              - Content-Type
+              - X-Requested-With
+              - accept
+              - Origin
+              - Access-Control-Request-Method
+              - Access-Control-Request-Headers
+              - Access-Control-Allow-Origin
+            exposedHeaders:
+              - Mg-A-Token
       routes:
         - id: authorization
           uri: http://localhost:8081
